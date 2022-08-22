@@ -15,6 +15,10 @@
         .cart-div {
             height: 360px;
         }
+
+        .budget-div {
+            height: 400px;
+        }
     </style>
 </head>
 
@@ -79,7 +83,7 @@
             </div>
             <div class="cart-div">
                 <div class="bg-zinc-800 text-white cart-div ">
-                    <h1 class="text-center text-2xl font-medium py-7">Selected-V</h1>
+                    <h1 class="text-center text-2xl font-medium py-7">Selected - <span id="player-list">V</span> </h1>
                     <div class="overflow-x-auto">
                         <ol id="cart-list" class="ml-16">
 
@@ -91,7 +95,7 @@
                 <div class="bg-zinc-800">
                     <img src="Image/messireeeeee.jpg" alt="">
                     <div class="text-center m-2 text-white">
-                        <h1 class="text-2xl font-medium">Leonel Messi</h1>
+                        <h1 class="text-2xl font-medium">Vítor Machado</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
                         <button class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium"
                             onclick=" addToCart(this); this.disabled = true;">SELECT</button>
@@ -102,7 +106,7 @@
                 <div class="bg-zinc-800">
                     <img src="Image/messireeeeee.jpg" alt="">
                     <div class="text-center m-2 text-white">
-                        <h1 class="text-2xl font-medium">Leonel Messi</h1>
+                        <h1 class="text-2xl font-medium">Renato Sanches</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
                         <button class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium"
                             onclick=" addToCart(this); this.disabled = true;">SELECT</button>
@@ -113,7 +117,7 @@
                 <div class="bg-zinc-800">
                     <img src="Image/messireeeeee.jpg" alt="">
                     <div class="text-center m-2 text-white">
-                        <h1 class="text-2xl font-medium">Leonel Messi</h1>
+                        <h1 class="text-2xl font-medium">Kylian Mbappé</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
                         <button class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium"
                             onclick=" addToCart(this); this.disabled = true;">SELECT</button>
@@ -121,13 +125,14 @@
                 </div>
             </div>
             <div class="">
-                <div class="bg-zinc-800 text-white">
+                <div class="budget-div bg-zinc-800 text-white">
                     <h1 class="text-2xl font-medium py-6 text-center">Budget</h1>
                     <p class="inline ml-5">Per Player</p>
-                    <input class="w-32 ml-5 bg-zinc-800 border-2 border-inherit h-9 " type="text">
-                    <button class="bg-amber-500 hover:bg-sky-700 px-5 ml-5 mt-4 mb-5 py-1 w-56 h-9 font-medium">SELECT
+                    <input id="per-player-cost" class="w-32 ml-5 bg-zinc-800 border-2 border-inherit h-9 " type="text">
+                    <button id="players-cost-btn"
+                        class="bg-amber-500 hover:bg-sky-700 px-5 ml-5 mt-4 mb-5 py-1 w-56 h-9 font-medium">SELECT
                     </button>
-                    <p class="ml-5 mb-2">Player Expences &nbsp &nbsp &nbsp <span>$50000</span></p>
+                    <p class="ml-5 mb-2">Player Expences &nbsp &nbsp &nbsp &nbsp $<span id="playerExpences"></span></p>
                     <p class="inline ml-5">Manager</p>
                     <input class="w-32 mb-2 ml-7 bg-zinc-800 border-2 border-inherit h-9 " type="text">
                     <p class="inline ml-5">Coach</p>
@@ -136,8 +141,7 @@
                     </button>
                     <p class="inline ml-5">Total</p>
                     <p class="inline ml-28 text-red-400 ">$<span>000000</span> </p>
-                    <button class="bg-amber-500 hover:bg-sky-700 px-5 ml-5 mt-4 mb-4 py-1 w-56 h-9 font-medium">RESET
-                    </button>
+
                 </div>
             </div>
         </div>
