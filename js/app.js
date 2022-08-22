@@ -1,7 +1,6 @@
-
+// common onclick function for every selected item
 let count = 0;
 function addToCart(element) {
-
     if (count < 5) {
         const playerName = element.parentNode.children[0].innerText;
         count++;
