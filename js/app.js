@@ -22,6 +22,9 @@ function getInputValueById(elementId) {
     const inputElement = document.getElementById(elementId);
     const inputElementString = inputElement.value;
     const inputValue = parseFloat(inputElementString);
+    if (isNaN(inputValue)) {
+        return alert('Please provide a valid number!')
+    }
     return inputValue;
 }
 
