@@ -10,6 +10,7 @@ function addToCart(element) {
         list.innerText = count + '. ' + playerName;
         list.style.marginBottom = '10px';
         cart.appendChild(list);
+        element.style.backgroundColor = 'gray';
         const playerList = document.getElementById('player-list');
         playerList.innerText = count;
     }
@@ -37,14 +38,12 @@ function getElementInputById(elementId) {
 
 document.getElementById('players-cost-btn').addEventListener('click', function () {
     const perPlayeCost = getInputValueById('per-player-cost');
-    console.log(perPlayeCost);
-    const playerTotal = getElementInputById('player-list')
+
+    const playerTotal = document.getElementsByClassName('c')[0].childElementCount;
     const totalPlayerCost = perPlayeCost * playerTotal;
 
     const playerExpences = document.getElementById('playerExpences');
     playerExpences.innerText = totalPlayerCost;
-
-    console.log(totalPlayerCost);
 })
 
 document.getElementById('total-expences-btn').addEventListener('click', function () {
@@ -56,6 +55,4 @@ document.getElementById('total-expences-btn').addEventListener('click', function
     const totalCost = document.getElementById('total-expences');
     totalCost.innerText = totalExpences;
 
-
-    console.log(totalExpences);
 })
