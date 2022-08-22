@@ -16,12 +16,9 @@ function addToCart(element) {
     else {
         alert("You already added 5 player. Can not added more than 5 player!")
     }
-
-
-
 }
 
-function getInputById(elementId) {
+function getInputValueById(elementId) {
     const inputElement = document.getElementById(elementId);
     const inputElementString = inputElement.value;
     const inputValue = parseFloat(inputElementString);
@@ -36,7 +33,8 @@ function getElementInputById(elementId) {
 }
 
 document.getElementById('players-cost-btn').addEventListener('click', function () {
-    const perPlayeCost = getInputById('per-player-cost');
+    const perPlayeCost = getInputValueById('per-player-cost');
+    console.log(perPlayeCost);
     const playerTotal = getElementInputById('player-list')
     const totalPlayerCost = perPlayeCost * playerTotal;
 
@@ -44,4 +42,17 @@ document.getElementById('players-cost-btn').addEventListener('click', function (
     playerExpences.innerText = totalPlayerCost;
 
     console.log(totalPlayerCost);
+})
+
+document.getElementById('total-expences-btn').addEventListener('click', function () {
+    const managerExpences = getInputValueById('manager-expences')
+    const coachExpences = getInputValueById('coach-expences')
+    const playersExpences = getElementInputById('playerExpences')
+    const totalExpences = managerExpences + coachExpences + playersExpences;
+
+    const totalCost = document.getElementById('total-expences');
+    totalCost.innerText = totalExpences;
+
+
+    console.log(totalExpences);
 })
