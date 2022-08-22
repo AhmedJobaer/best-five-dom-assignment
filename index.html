@@ -11,6 +11,10 @@
         .banner {
             display: flex;
         }
+
+        .cart-div {
+            height: 360px;
+        }
     </style>
 </head>
 
@@ -44,8 +48,9 @@
                     <div class="text-center m-2 text-white">
                         <h1 class="text-2xl font-medium">Leonel Messi</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
-                        <button
-                            class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium">SELECT</button>
+                        <button id="btn-select"
+                            class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium"
+                            onclick=" addToCart(this); this.disabled = true;">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -53,10 +58,11 @@
                 <div class="bg-zinc-800">
                     <img src="Image/messireeeeee.jpg" alt="">
                     <div class="text-center m-2 text-white">
-                        <h1 class="text-2xl font-medium">Leonel Messi</h1>
+                        <h1 class="text-2xl font-medium">Neymar Jr</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
-                        <button
-                            class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium">SELECT</button>
+                        <button id="btn-select"
+                            class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium"
+                            onclick=" addToCart(this); this.disabled = true;">SELECT</button>
                     </div>
                 </div>
             </div>
@@ -64,24 +70,20 @@
                 <div class="bg-zinc-800">
                     <img src="Image/messireeeeee.jpg" alt="">
                     <div class="text-center m-2 text-white">
-                        <h1 class="text-2xl font-medium">Leonel Messi</h1>
+                        <h1 class="text-2xl font-medium">Sargio Ramous</h1>
                         <p class="mt-2">36 Goals | 120 Assist</p>
                         <button
                             class="bg-amber-500 hover:bg-sky-700 px-5 mt-4 mb-5 py-1 w-48 h-9 font-medium">SELECT</button>
                     </div>
                 </div>
             </div>
-            <div class="">
-                <div class="bg-zinc-800 text-white half-width ">
+            <div class="cart-div">
+                <div class="bg-zinc-800 text-white cart-div ">
                     <h1 class="text-center text-2xl font-medium py-7">Selected-V</h1>
-                    <div class="">
-                        <li class="py-14 ml-4 text-2xl">
-                            <ul>1</ul>
-                            <ul>1</ul>
-                            <ul>1</ul>
-                            <ul>1</ul>
+                    <div class="overflow-x-auto">
+                        <ol id="cart-list" class="ml-16">
 
-                        </li>
+                        </ol>
                     </div>
                 </div>
             </div>
@@ -147,6 +149,7 @@
             </div>
         </div>
     </footer>
+    <script src="js/app.js"></script>
 </body>
 
 </html>
