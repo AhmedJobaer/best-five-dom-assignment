@@ -14,7 +14,7 @@ function addToCart(element) {
         playerList.innerText = count;
     }
     else {
-        alert("You already added 5 player. Can not added more than 5 player!")
+        alert("You have already added 5 player. Can not added more than 5 player!")
     }
 }
 
@@ -22,8 +22,8 @@ function getInputValueById(elementId) {
     const inputElement = document.getElementById(elementId);
     const inputElementString = inputElement.value;
     const inputValue = parseFloat(inputElementString);
-    if (isNaN(inputValue)) {
-        return alert('Please provide a valid number!')
+    if (isNaN(inputValue) || inputValue < 0) {
+        return alert('Please provide a valid positive number!')
     }
     return inputValue;
 }
