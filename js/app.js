@@ -38,7 +38,7 @@ function getElementInputById(elementId) {
 document.getElementById('players-cost-btn').addEventListener('click', function () {
     const perPlayeCost = getInputValueById('per-player-cost');
 
-    const playerTotal = document.getElementsByClassName('c')[0].childElementCount;
+    const playerTotal = document.getElementsByClassName('player-number')[0].childElementCount;
     const totalPlayerCost = perPlayeCost * playerTotal;
 
     const playerExpences = document.getElementById('playerExpences');
